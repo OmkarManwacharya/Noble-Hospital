@@ -1,0 +1,1190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Noble Hospital | Quality Healthcare in Kandivali West</title>
+  <meta name="description"
+    content="Noble Hospital is a top multi-speciality hospital in Kandivali West offering 24/7 care, emergency treatment, maternity, ICU, and diagnostics.">
+  <meta name="keywords"
+    content="Hospital in Kandivali West, Best hospital in Kandivali, 24 hour hospital Kandivali, Multispeciality hospital Kandivali West, Emergency hospital Kandivali">
+
+  <!-- Schema.org Script -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Hospital",
+    "name": "Noble Hospital",
+    "image": "",
+    "url": "https://www.noblehospital.com",
+    "telephone": "+91 73041 98020",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Assumption View, Dhanukar Wadi, Opp St Joseph School, Kandivali Village Lane, Off MG Road",
+      "addressLocality": "Kandivali West, Mumbai",
+      "addressRegion": "Maharashtra",
+      "postalCode": "400067",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "00:00",
+      "closes": "23:59"
+    }
+  }
+  </script>
+
+  <!-- External Fonts and Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #1E88E5;
+  --secondary-color: #FFFFFF;
+  --accent-color: #E3F2FD;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #F8F9FA;
+  --danger-color: #E53935;
+  --success-color: #4CAF50;
+  
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: #1565C0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.text-center { text-align: center; }
+.bg-light { background-color: var(--bg-light); }
+.bg-accent { background-color: var(--accent-color); }
+.bg-primary { background-color: var(--primary-color); color: white; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+  background-color: #1565C0;
+  color: var(--secondary-color);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+/* Cards */
+.card {
+  background: var(--secondary-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 30px;
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+/* Navigation */
+.top-bar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-info, .top-bar-emergency {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.top-bar-info span, .top-bar-emergency span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar a {
+  color: white;
+  font-weight: 500;
+}
+
+.navbar {
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.logo-icon.material-icons {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links.nav-menu {
+  margin-right: -15px;
+}
+
+.nav-links a.nav-item {
+  color: var(--text-dark);
+  font-weight: 500;
+  font-family: var(--font-heading);
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-links a.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav-links a.nav-item:hover::after, .nav-links a.nav-item.active::after {
+  width: 100%;
+}
+
+.nav-links a.nav-item:hover, .nav-links a.nav-item.active {
+  color: var(--primary-color);
+}
+
+.mobile-toggle {
+  display: none;
+  font-size: 2rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+/* Floating Actions */
+.floating-actions {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.floating-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.btn-whatsapp { background-color: #25D366; }
+.btn-call { background-color: var(--primary-color); }
+
+/* Footer */
+.footer {
+  background-color: #1A1A1A;
+  color: #fff;
+  padding: 80px 0 20px;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-col h3 {
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.footer-col p {
+  color: #bbb;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-col p .material-icons {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a::before {
+  content: 'chevron_right';
+  font-family: 'Material Icons';
+  font-size: 1rem;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 25px;
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* Base Styles & Utility */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .nav-links.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-color);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    margin: 0;
+  }
+  
+  .nav-links.nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-links.nav-menu .nav-item {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-links.nav-menu .nav-item::after {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-action-btn {
+    display: none;
+  }
+  
+  .top-bar-info {
+    display: none;
+  }
+  
+  .top-bar .container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  section {
+    padding: 60px 0;
+  }
+}
+
+  </style>
+  <style>
+    /* Homepage Specific Styles */
+    .hero {
+      position: relative;
+      background: linear-gradient(rgba(30, 136, 229, 0.8), rgba(30, 136, 229, 0.8)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: white;
+      padding: 120px 0;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      animation: fadeInDown 1s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 40px;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      animation: fadeInUp 1s ease 0.3s forwards;
+      opacity: 0;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      animation: fadeInUp 1s ease 0.6s forwards;
+      opacity: 0;
+    }
+
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Quick Info */
+    .quick-info {
+      margin-top: -50px;
+      position: relative;
+      z-index: 10;
+    }
+
+    .quick-info-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .info-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      transition: var(--transition);
+    }
+
+    .info-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .info-icon {
+      font-size: 3rem;
+      color: var(--primary-color);
+    }
+
+    /* Services Preview */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 12px;
+      background: white;
+      box-shadow: var(--shadow-sm);
+      transition: var(--transition);
+      border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary-color);
+    }
+
+    .service-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--accent-color);
+      color: var(--primary-color);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+      margin: 0 auto 20px;
+      transition: var(--transition);
+    }
+
+    .service-card:hover .service-icon {
+      background: var(--primary-color);
+      color: white;
+    }
+
+    /* About Preview */
+    .about-preview {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-preview-img {
+      flex: 1;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .about-preview-content {
+      flex: 1;
+    }
+
+    /* Why Choose Us */
+    .features-list {
+      margin-top: 30px;
+    }
+
+    .feature-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 20px;
+    }
+
+    .feature-item .material-icons {
+      color: var(--success-color);
+      background: rgba(76, 175, 80, 0.1);
+      padding: 8px;
+      border-radius: 50%;
+    }
+
+    /* Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial-card {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .quote-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 3rem;
+      color: var(--accent-color);
+      opacity: 0.5;
+    }
+
+    .stars {
+      color: #FFD700;
+      margin-bottom: 15px;
+    }
+
+    .reviewer {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-top: 20px;
+      border-top: 1px solid #eee;
+      padding-top: 15px;
+    }
+
+    .reviewer-avatar {
+      width: 50px;
+      height: 50px;
+      background: var(--primary-color);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    /* Map & CTA */
+    .map-container {
+      height: 400px;
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+    }
+
+    .cta-section {
+      background: var(--primary-color);
+      color: white;
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .about-preview {
+        flex-direction: column;
+      }
+
+      .hero-btns {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-info">
+        <span><i class="material-icons">location_on</i> Kandivali West, Mumbai</span>
+        <span><i class="material-icons">schedule</i> Open 24 Hours</span>
+      </div>
+      <div class="top-bar-emergency">
+        <span><i class="material-icons">emergency</i> Emergency: <a href="tel:+917304198020">+91 73041 98020</a></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="material-icons logo-icon">local_hospital</i>
+        Noble Hospital
+      </a>
+
+      <button class="mobile-toggle">
+        <i class="material-icons">menu</i>
+      </button>
+
+      <div class="nav-links nav-menu">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About Us</a>
+        <a href="services.html" class="nav-item">Services</a>
+        <a href="doctors.html" class="nav-item">Doctors</a>
+        <a href="facilities.html" class="nav-item">Facilities</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="contact.html" class="btn btn-primary nav-action-btn" style="margin-left: 15px;">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Quality Healthcare You Can Trust</h1>
+      <p>Compassionate 24/7 medical care in the heart of Kandivali West. Advanced facilities, experienced doctors, and
+        patient-first approach.</p>
+      <div class="hero-btns">
+        <a href="contact.html" class="btn btn-accent">Book Appointment</a>
+        <a href="tel:+917304198020" class="btn btn-outline" style="color: white; border-color: white;">Call Hospital</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Quick Info Bar -->
+  <div class="quick-info container">
+    <div class="quick-info-grid">
+      <div class="info-card">
+        <i class="material-icons info-icon">schedule</i>
+        <div>
+          <h3 style="margin-bottom: 5px; font-size: 1.2rem;">Open 24 Hours</h3>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Round the clock care</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <i class="material-icons info-icon">support_agent</i>
+        <div>
+          <h3 style="margin-bottom: 5px; font-size: 1.2rem;">Emergency Support</h3>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Immediate medical response</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <i class="material-icons info-icon">health_and_safety</i>
+        <div>
+          <h3 style="margin-bottom: 5px; font-size: 1.2rem;">Experienced Doctors</h3>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Expert specialists on call</p>
+        </div>
+      </div>
+      <div class="info-card">
+        <i class="material-icons info-icon">medical_information</i>
+        <div>
+          <h3 style="margin-bottom: 5px; font-size: 1.2rem;">Modern Facilities</h3>
+          <p style="color: var(--text-light); font-size: 0.9rem;">Advanced medical technology</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- About Preview Section -->
+  <section class="bg-light">
+    <div class="container">
+      <div class="about-preview animate-on-scroll">
+        <div class="about-preview-img">
+          <!-- Placeholder using a clean medical image from Unsplash -->
+          <img
+            src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+            alt="Noble Hospital Interior">
+        </div>
+        <div class="about-preview-content">
+          <h4 style="color: var(--primary-color);">Welcome to Noble Hospital</h4>
+          <h2>Dedicated to Excellence in Patient Care</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Located seamlessly in Kandivali West, Noble Hospital
+            has been a beacon of hope and healing for our community. We combine world-class medical expertise with
+            compassionate care to ensure the best possible outcomes for our patients.</p>
+          <ul class="features-list">
+            <li class="feature-item">
+              <i class="material-icons">check_circle</i>
+              <span>High-quality, patient-centric healthcare</span>
+            </li>
+            <li class="feature-item">
+              <i class="material-icons">check_circle</i>
+              <span>State-of-the-art diagnostic and surgical equipment</span>
+            </li>
+            <li class="feature-item">
+              <i class="material-icons">check_circle</i>
+              <span>A team of highly qualified doctors and nurses</span>
+            </li>
+          </ul>
+          <a href="about.html" class="btn btn-outline" style="margin-top: 20px;">Learn More About Us <i
+              class="material-icons" style="font-size: 1rem;">arrow_forward</i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Preview Section -->
+  <section>
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">Our Medical Specialties</h2>
+      <div class="services-grid">
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon"><i class="material-icons">medical_services</i></div>
+          <h3>General Medicine</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Comprehensive diagnosis and treatment for a wide
+            range of adult illnesses and health conditions.</p>
+          <a href="services.html" style="font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">Read
+            More <i class="material-icons" style="font-size: 1.2rem;">arrow_right_alt</i></a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon"><i class="material-icons">healing</i></div>
+          <h3>General Surgery</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Advanced surgical interventions using minimally
+            invasive techniques for faster recovery.</p>
+          <a href="services.html" style="font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">Read
+            More <i class="material-icons" style="font-size: 1.2rem;">arrow_right_alt</i></a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon"><i class="material-icons">pregnant_woman</i></div>
+          <h3>Maternity Care</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Complete prenatal to postnatal care ensuring safe
+            delivery and healthy beginnings.</p>
+          <a href="services.html" style="font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">Read
+            More <i class="material-icons" style="font-size: 1.2rem;">arrow_right_alt</i></a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon"><i class="material-icons">child_care</i></div>
+          <h3>Pediatric Care</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Specialized care for infants, children, and
+            adolescents by experienced pediatricians.</p>
+          <a href="services.html" style="font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">Read
+            More <i class="material-icons" style="font-size: 1.2rem;">arrow_right_alt</i></a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon"><i class="material-icons">monitor_heart</i></div>
+          <h3>ICU / Critical Care</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Fully equipped Intensive Care Units with 24/7
+            monitoring capabilities for critical patients.</p>
+          <a href="services.html" style="font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">Read
+            More <i class="material-icons" style="font-size: 1.2rem;">arrow_right_alt</i></a>
+        </div>
+
+        <div class="service-card animate-on-scroll">
+          <div class="service-icon"><i class="material-icons">biotech</i></div>
+          <h3>Diagnostic Tests</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Accurate and timely lab tests and imaging services
+            under one roof.</p>
+          <a href="services.html" style="font-weight: 500; display: inline-flex; align-items: center; gap: 5px;">Read
+            More <i class="material-icons" style="font-size: 1.2rem;">arrow_right_alt</i></a>
+        </div>
+
+      </div>
+      <div class="text-center" style="margin-top: 40px;">
+        <a href="services.html" class="btn btn-primary">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-light">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title">Why Choose Us?</h2>
+      <div class="quick-info-grid"
+        style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); text-align: center;">
+        <div>
+          <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"><i class="material-icons"
+              style="font-size: inherit;">group</i></div>
+          <h4 style="margin-bottom: 10px;">Experienced Team</h4>
+          <p style="color: var(--text-light); font-size: 0.95rem;">Renowned specialists across various medical fields.
+          </p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"><i class="material-icons"
+              style="font-size: inherit;">local_hospital</i></div>
+          <h4 style="margin-bottom: 10px;">24/7 Emergency Care</h4>
+          <p style="color: var(--text-light); font-size: 0.95rem;">Rapid response team available around the clock.</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"><i class="material-icons"
+              style="font-size: inherit;">favorite</i></div>
+          <h4 style="margin-bottom: 10px;">Patient-Focused</h4>
+          <p style="color: var(--text-light); font-size: 0.95rem;">Compassionate care tailored to individual needs.</p>
+        </div>
+        <div>
+          <div style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;"><i class="material-icons"
+              style="font-size: inherit;">savings</i></div>
+          <h4 style="margin-bottom: 10px;">Affordable Care</h4>
+          <p style="color: var(--text-light); font-size: 0.95rem;">High-quality treatment that is accessible to all.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Patient Reviews Section -->
+  <section>
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">What Our Patients Say</h2>
+      <div class="testimonials-grid">
+
+        <div class="testimonial-card animate-on-scroll">
+          <i class="material-icons quote-icon">format_quote</i>
+          <div class="stars">
+            <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i
+              class="material-icons">star</i><i class="material-icons">star</i>
+          </div>
+          <p>"The emergency response was fantastic when my father had a health scare. The doctors are incredibly
+            knowledgeable and caring. Best hospital in Kandivali West by far."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">SP</div>
+            <div>
+              <h4 style="margin: 0;">Sanjay Patel</h4>
+              <span style="font-size: 0.85rem; color: var(--text-light);">Local Resident</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-on-scroll">
+          <i class="material-icons quote-icon">format_quote</i>
+          <div class="stars">
+            <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i
+              class="material-icons">star</i><i class="material-icons">star</i>
+          </div>
+          <p>"I delivered my first child at Noble Hospital. The maternity staff went above and beyond to make me
+            comfortable. The facilities are modern and exceptionally clean."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">ND</div>
+            <div>
+              <h4 style="margin: 0;">Neha Desai</h4>
+              <span style="font-size: 0.85rem; color: var(--text-light);">New Mother</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonial-card animate-on-scroll">
+          <i class="material-icons quote-icon">format_quote</i>
+          <div class="stars">
+            <i class="material-icons">star</i><i class="material-icons">star</i><i class="material-icons">star</i><i
+              class="material-icons">star</i><i class="material-icons">star_half</i>
+          </div>
+          <p>"Excellent diagnostic center. Getting all the tests done under one roof saved so much time. The staff is
+            polite and very professional."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar">RK</div>
+            <div>
+              <h4 style="margin: 0;">Rahul Kumar</h4>
+              <span style="font-size: 0.85rem; color: var(--text-light);">Patient</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Location Map -->
+  <section class="bg-light" style="padding-bottom: 0;">
+    <div class="container animate-on-scroll">
+      <h2 class="section-title">Find Us</h2>
+      <div class="map-container" style="margin-bottom: -5px;"> <!-- Offset to blend with next section if needed -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15072.083161394578!2d72.82563364999999!3d19.2066861!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b6d13bd14b2b%3A0xe5dfb828f7ca5d0d!2sKandivali%20West%2C%20Mumbai%2C%20Maharashtra!5e0!3m2!1sen!2sin!4v1689252345678!5m2!1sen!2sin"
+          width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container animate-on-scroll">
+      <h2 style="color: white; font-size: 2.5rem; margin-bottom: 20px;">Need Medical Assistance? Contact Us Today</h2>
+      <p style="font-size: 1.1rem; margin-bottom: 30px; opacity: 0.9;">Our expert medical team is ready 24/7 to provide
+        the care you deserve.</p>
+      <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-accent btn-lg" style="font-size: 1.1rem; padding: 15px 35px;">Book an
+          Appointment</a>
+        <a href="tel:+917304198020" class="btn btn-outline btn-lg"
+          style="color: white; border-color: white; font-size: 1.1rem; padding: 15px 35px;">Call +91 73041 98020</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: white; margin-bottom: 20px;">
+            <i class="material-icons logo-icon" style="color: var(--primary-color);">local_hospital</i>
+            Noble Hospital
+          </a>
+          <p>Delivering high-quality, compassionate, and affordable healthcare to the Kandivali West community. We are
+            committed to your well-being, 24/7.</p>
+          <div class="social-links">
+            <a href="#"><i class="material-icons" style="font-size: 1.2rem;">facebook</i></a>
+            <a href="#"><i class="material-icons" style="font-size: 1.2rem;">camera_alt</i></a>
+            <!-- Using camera_alt for Instagram representation in Material Icons -->
+            <a href="#"><i class="material-icons" style="font-size: 1.2rem;">play_arrow</i></a> <!-- Youtube -->
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul class="footer-links">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="doctors.html">Our Doctors</a></li>
+            <li><a href="facilities.html">Hospital Facilities</a></li>
+            <li><a href="contact.html">Patient Enquiries</a></li>
+            <li><a href="#">Health Tips Blog</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Our Services</h3>
+          <ul class="footer-links">
+            <li><a href="services.html">General Medicine</a></li>
+            <li><a href="services.html">General Surgery</a></li>
+            <li><a href="services.html">Maternity Care</a></li>
+            <li><a href="services.html">Pediatric Care</a></li>
+            <li><a href="services.html">ICU & Critical Care</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p><i class="material-icons">location_on</i> Assumption View, Dhanukar Wadi, Opp St Joseph School, Kandivali
+            Village Lane, Off MG Road, Kandivali West, Mumbai, MH 400067</p>
+          <p><i class="material-icons">phone</i> <a href="tel:+917304198020" style="color: inherit;">+91 73041 98020</a>
+          </p>
+          <p><i class="material-icons">email</i> <a href="mailto:info@noblehospital.com"
+              style="color: inherit;">info@noblehospital.com</a></p>
+          <p><i class="material-icons">schedule</i> Open 24 Hours, 7 Days a week</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Noble Hospital – All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Actions Base -->
+  <div class="floating-actions">
+    <a href="https://wa.me/917304198020" target="_blank" class="floating-btn btn-whatsapp" title="Chat on WhatsApp">
+      <i class="material-icons">chat</i>
+    </a>
+    <a href="tel:+917304198020" class="floating-btn btn-call" title="Call Emergency">
+      <i class="material-icons">call</i>
+    </a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

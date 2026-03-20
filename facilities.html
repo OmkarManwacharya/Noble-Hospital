@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Facilities | Noble Hospital Kandivali</title>
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #1E88E5;
+  --secondary-color: #FFFFFF;
+  --accent-color: #E3F2FD;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #F8F9FA;
+  --danger-color: #E53935;
+  --success-color: #4CAF50;
+  
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: #1565C0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.text-center { text-align: center; }
+.bg-light { background-color: var(--bg-light); }
+.bg-accent { background-color: var(--accent-color); }
+.bg-primary { background-color: var(--primary-color); color: white; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+  background-color: #1565C0;
+  color: var(--secondary-color);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+/* Cards */
+.card {
+  background: var(--secondary-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 30px;
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+/* Navigation */
+.top-bar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-info, .top-bar-emergency {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.top-bar-info span, .top-bar-emergency span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar a {
+  color: white;
+  font-weight: 500;
+}
+
+.navbar {
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.logo-icon.material-icons {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links.nav-menu {
+  margin-right: -15px;
+}
+
+.nav-links a.nav-item {
+  color: var(--text-dark);
+  font-weight: 500;
+  font-family: var(--font-heading);
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-links a.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav-links a.nav-item:hover::after, .nav-links a.nav-item.active::after {
+  width: 100%;
+}
+
+.nav-links a.nav-item:hover, .nav-links a.nav-item.active {
+  color: var(--primary-color);
+}
+
+.mobile-toggle {
+  display: none;
+  font-size: 2rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+/* Floating Actions */
+.floating-actions {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.floating-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.btn-whatsapp { background-color: #25D366; }
+.btn-call { background-color: var(--primary-color); }
+
+/* Footer */
+.footer {
+  background-color: #1A1A1A;
+  color: #fff;
+  padding: 80px 0 20px;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-col h3 {
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.footer-col p {
+  color: #bbb;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-col p .material-icons {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a::before {
+  content: 'chevron_right';
+  font-family: 'Material Icons';
+  font-size: 1rem;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 25px;
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* Base Styles & Utility */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .nav-links.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-color);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    margin: 0;
+  }
+  
+  .nav-links.nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-links.nav-menu .nav-item {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-links.nav-menu .nav-item::after {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-action-btn {
+    display: none;
+  }
+  
+  .top-bar-info {
+    display: none;
+  }
+  
+  .top-bar .container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  section {
+    padding: 60px 0;
+  }
+}
+
+  </style>
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(30, 136, 229, 0.85), rgba(30, 136, 229, 0.85)), url('https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .facility-card {
+      display: flex;
+      flex-direction: column;
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      margin-bottom: 40px;
+      transition: var(--transition);
+      border: 1px solid #eee;
+    }
+    
+    .facility-card:hover {
+      box-shadow: var(--shadow-md);
+      transform: translateY(-5px);
+    }
+    
+    .facility-img {
+      height: 300px;
+      width: 100%;
+      object-fit: cover;
+    }
+    
+    .facility-content {
+      padding: 30px;
+    }
+    
+    .facility-content h3 {
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 15px;
+    }
+    
+    @media (min-width: 768px) {
+      .facility-card {
+        flex-direction: row;
+        align-items: center;
+      }
+      .facility-card:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+      .facility-img {
+        width: 50%;
+        height: 100%;
+        min-height: 400px;
+      }
+      .facility-content {
+        width: 50%;
+        padding: 50px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="material-icons logo-icon">local_hospital</i> Noble Hospital
+      </a>
+      <button class="mobile-toggle"><i class="material-icons">menu</i></button>
+      <div class="nav-links nav-menu">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About Us</a>
+        <a href="services.html" class="nav-item">Services</a>
+        <a href="doctors.html" class="nav-item">Doctors</a>
+        <a href="facilities.html" class="nav-item active">Facilities</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="animate-on-scroll">World-Class Infrastructure</h1>
+      <p class="animate-on-scroll" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Equipped with the latest medical technology to provide superior patient care.</p>
+    </div>
+  </div>
+
+  <section class="bg-light">
+    <div class="container">
+      
+      <div class="facility-card animate-on-scroll">
+        <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Intensive Care Unit" class="facility-img">
+        <div class="facility-content">
+          <h3><i class="material-icons">monitor_heart</i> Intensive Care Unit (ICU)</h3>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Our thoroughly equipped ICU is designed for continuous monitoring and rapid intervention for critically ill patients. It features central monitoring systems, advanced ventilators, and is staffed round the clock by critical care specialists.</p>
+          <ul style="color: var(--text-light); padding-left: 20px;">
+            <li>1:1 Patient-to-Nurse Ratio</li>
+            <li>Advanced Life Support Systems</li>
+            <li>Strict Infection Control Protocols</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility-card animate-on-scroll">
+        <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Operation Theater" class="facility-img">
+        <div class="facility-content">
+          <h3><i class="material-icons">healing</i> Modular Operation Theaters</h3>
+          <p style="color: var(--text-light); margin-bottom: 20px;">State-of-the-art modular operation theaters adhering to international standards of sterility and safety. Equipped to handle major complex surgeries with minimal risk of surgical site infections.</p>
+          <ul style="color: var(--text-light); padding-left: 20px;">
+            <li>Laminar Air Flow with HEPA filters</li>
+            <li>Advanced Anesthesia Stations</li>
+            <li>C-Arm for Orthopedic procedures</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="facility-card animate-on-scroll">
+        <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Patient Rooms" class="facility-img">
+        <div class="facility-content">
+          <h3><i class="material-icons">bed</i> Comfortable Patient Rooms</h3>
+          <p style="color: var(--text-light); margin-bottom: 20px;">We offer a range of accommodation options including General Wards, Twin Sharing, and Private AC Rooms. All rooms are designed to provide maximum comfort for patients and attendants during their stay.</p>
+          <ul style="color: var(--text-light); padding-left: 20px;">
+            <li>Motorized beds for comfort</li>
+            <li>24/7 Nursing Call System</li>
+            <li>Nutritional Diet Support</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="facility-card animate-on-scroll">
+        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Diagnostics Center" class="facility-img">
+        <div class="facility-content">
+          <h3><i class="material-icons">biotech</i> Advanced Diagnostics</h3>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Our fully automated in-house pathology lab and modern imaging center ensure accurate and quick diagnostic results, aiding our doctors in prompt treatment planning.</p>
+          <ul style="color: var(--text-light); padding-left: 20px;">
+            <li>Digital X-Ray and Sonography</li>
+            <li>2D Echo and ECG</li>
+            <li>Comprehensive Blood & Urine Analysis</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

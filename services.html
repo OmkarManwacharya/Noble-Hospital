@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical Services | Noble Hospital Kandivali West</title>
+  <meta name="description" content="Noble Hospital provides comprehensive medical services including General Medicine, Surgery, Maternity Care, Pediatrics, ICU, and Diagnostics.">
+  
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+  --primary-color: #1E88E5;
+  --secondary-color: #FFFFFF;
+  --accent-color: #E3F2FD;
+  --text-dark: #333333;
+  --text-light: #666666;
+  --bg-light: #F8F9FA;
+  --danger-color: #E53935;
+  --success-color: #4CAF50;
+  
+  --font-heading: 'Poppins', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  
+  --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+  
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--text-dark);
+  line-height: 1.6;
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 600;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+a:hover {
+  color: #1565C0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--text-dark);
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.text-center { text-align: center; }
+.bg-light { background-color: var(--bg-light); }
+.bg-accent { background-color: var(--accent-color); }
+.bg-primary { background-color: var(--primary-color); color: white; }
+
+/* Buttons */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 28px;
+  border-radius: 30px;
+  font-family: var(--font-heading);
+  font-weight: 500;
+  cursor: pointer;
+  transition: var(--transition);
+  border: none;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.btn-primary:hover {
+  background-color: #1565C0;
+  color: var(--secondary-color);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  transform: translateY(-2px);
+}
+
+.btn-accent {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+.btn-accent:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  transform: translateY(-2px);
+}
+
+/* Form Controls */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: var(--transition);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(30, 136, 229, 0.1);
+}
+
+/* Cards */
+.card {
+  background: var(--secondary-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  padding: 30px;
+  transition: var(--transition);
+  border: 1px solid rgba(0,0,0,0.05);
+  height: 100%;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+}
+
+/* Navigation */
+.top-bar {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px 0;
+  font-size: 0.9rem;
+}
+
+.top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar-info, .top-bar-emergency {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.top-bar-info span, .top-bar-emergency span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.top-bar a {
+  color: white;
+  font-weight: 500;
+}
+
+.navbar {
+  background-color: var(--secondary-color);
+  box-shadow: var(--shadow-sm);
+  padding: 15px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: var(--transition);
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.logo-icon.material-icons {
+  font-size: 2.2rem;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.nav-links.nav-menu {
+  margin-right: -15px;
+}
+
+.nav-links a.nav-item {
+  color: var(--text-dark);
+  font-weight: 500;
+  font-family: var(--font-heading);
+  position: relative;
+  padding: 8px 0;
+}
+
+.nav-links a.nav-item::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.nav-links a.nav-item:hover::after, .nav-links a.nav-item.active::after {
+  width: 100%;
+}
+
+.nav-links a.nav-item:hover, .nav-links a.nav-item.active {
+  color: var(--primary-color);
+}
+
+.mobile-toggle {
+  display: none;
+  font-size: 2rem;
+  color: var(--text-dark);
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 5px;
+}
+
+/* Floating Actions */
+.floating-actions {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  z-index: 999;
+}
+
+.floating-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.8rem;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+.floating-btn:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+.btn-whatsapp { background-color: #25D366; }
+.btn-call { background-color: var(--primary-color); }
+
+/* Footer */
+.footer {
+  background-color: #1A1A1A;
+  color: #fff;
+  padding: 80px 0 20px;
+  margin-top: auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  margin-bottom: 50px;
+}
+
+.footer-col h3 {
+  color: var(--secondary-color);
+  margin-bottom: 25px;
+  position: relative;
+  padding-bottom: 12px;
+  font-size: 1.2rem;
+}
+
+.footer-col h3::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: 2px;
+}
+
+.footer-col p {
+  color: #bbb;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.footer-col p .material-icons {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-top: 2px;
+}
+
+.footer-links li {
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: #bbb;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.footer-links a::before {
+  content: 'chevron_right';
+  font-family: 'Material Icons';
+  font-size: 1rem;
+  color: var(--primary-color);
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--secondary-color);
+  transform: translateX(5px);
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.05);
+  color: white;
+  transition: var(--transition);
+}
+
+.social-links a:hover {
+  background: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 25px;
+  text-align: center;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+/* Base Styles & Utility */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .nav-links.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: var(--secondary-color);
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    margin: 0;
+  }
+  
+  .nav-links.nav-menu.active {
+    display: flex;
+  }
+  
+  .nav-links.nav-menu .nav-item {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .nav-links.nav-menu .nav-item::after {
+    display: none;
+  }
+  
+  .mobile-toggle {
+    display: block;
+  }
+  
+  .nav-action-btn {
+    display: none;
+  }
+  
+  .top-bar-info {
+    display: none;
+  }
+  
+  .top-bar .container {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  section {
+    padding: 60px 0;
+  }
+}
+
+  </style>
+  <style>
+    .page-header {
+      background: linear-gradient(rgba(30, 136, 229, 0.85), rgba(30, 136, 229, 0.85)), url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+      color: white;
+      padding: 80px 0;
+      text-align: center;
+    }
+    
+    .service-detail-section {
+      padding: 60px 0;
+      border-bottom: 1px solid #eee;
+    }
+    
+    .service-detail-section:nth-child(even) {
+      background-color: var(--bg-light);
+    }
+    
+    .service-layout {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      align-items: center;
+    }
+    
+    .service-layout.reverse {
+      flex-direction: row-reverse;
+    }
+    
+    .service-content {
+      flex: 1;
+      min-width: 300px;
+    }
+    
+    .service-image {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+    
+    .service-image img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+    
+    .service-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--primary-color);
+      color: white;
+      padding: 10px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 60px;
+      height: 60px;
+    }
+    
+    .service-features {
+      margin-top: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 15px;
+    }
+    
+    .service-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    
+    .service-features li .material-icons {
+      color: var(--success-color);
+      font-size: 1.2rem;
+      margin-top: 3px;
+    }
+    
+    @media (max-width: 768px) {
+      .service-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-bar-info">
+        <span><i class="material-icons">location_on</i> Kandivali West, Mumbai</span>
+        <span><i class="material-icons">schedule</i> Open 24 Hours</span>
+      </div>
+      <div class="top-bar-emergency">
+        <span><i class="material-icons">emergency</i> Emergency: <a href="tel:+917304198020">+91 73041 98020</a></span>
+      </div>
+    </div>
+  </div>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <i class="material-icons logo-icon">local_hospital</i> Noble Hospital
+      </a>
+      <button class="mobile-toggle"><i class="material-icons">menu</i></button>
+      <div class="nav-links nav-menu">
+        <a href="index.html" class="nav-item">Home</a>
+        <a href="about.html" class="nav-item">About Us</a>
+        <a href="services.html" class="nav-item active">Services</a>
+        <a href="doctors.html" class="nav-item">Doctors</a>
+        <a href="facilities.html" class="nav-item">Facilities</a>
+        <a href="contact.html" class="nav-item">Contact</a>
+        <a href="contact.html" class="btn btn-primary nav-action-btn" style="margin-left: 15px;">Book Appointment</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <h1 class="animate-on-scroll">Our Medical Services</h1>
+      <p class="animate-on-scroll" style="font-size: 1.2rem; max-width: 600px; margin: 0 auto;">Comprehensive, state-of-the-art healthcare solutions under one roof.</p>
+    </div>
+  </div>
+
+  <!-- General Medicine -->
+  <section class="service-detail-section" id="general-medicine">
+    <div class="container">
+      <div class="service-layout animate-on-scroll">
+        <div class="service-image">
+          <div class="service-badge"><i class="material-icons" style="font-size: 2rem;">medical_services</i></div>
+          <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="General Medicine">
+        </div>
+        <div class="service-content">
+          <h2 style="color: var(--primary-color);">General Medicine</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Our General Medicine department is your primary point of contact for routine, chronic, and acute medical complaints. We provide holistic care, focusing on proper diagnosis, disease prevention, and health promotion.</p>
+          
+          <h4 style="margin-bottom: 10px;">Treatment Approach</h4>
+          <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px;">We believe in a comprehensive diagnostic approach followed by evidence-based medicine and lifestyle modification recommendations.</p>
+          
+          <h4 style="margin-bottom: 10px;">When to Visit:</h4>
+          <ul class="service-features">
+            <li><i class="material-icons">check_circle</i> Fevers & Infections</li>
+            <li><i class="material-icons">check_circle</i> Respiratory Issues</li>
+            <li><i class="material-icons">check_circle</i> Diabetes Management</li>
+            <li><i class="material-icons">check_circle</i> Hypertension Care</li>
+            <li><i class="material-icons">check_circle</i> Thyroid Disorders</li>
+            <li><i class="material-icons">check_circle</i> Routine Health Checkups</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- General Surgery -->
+  <section class="service-detail-section" id="general-surgery">
+    <div class="container">
+      <div class="service-layout reverse animate-on-scroll">
+        <div class="service-image">
+          <div class="service-badge"><i class="material-icons" style="font-size: 2rem;">healing</i></div>
+          <img src="https://images.unsplash.com/photo-1551076805-e18690c5e561?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="General Surgery">
+        </div>
+        <div class="service-content">
+          <h2 style="color: var(--primary-color);">General Surgery</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Equipped with modular operation theaters, our surgical team performs a wide spectrum of conventional and laparoscopic surgeries with precision, ensuring quick recovery and minimal scarring.</p>
+          
+          <h4 style="margin-bottom: 10px;">Treatment Approach</h4>
+          <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px;">Prioritizing minimally invasive techniques whenever possible to reduce pain, hospital stay, and recovery time.</p>
+          
+          <h4 style="margin-bottom: 10px;">Common Procedures:</h4>
+          <ul class="service-features">
+            <li><i class="material-icons">check_circle</i> Appendectomy</li>
+            <li><i class="material-icons">check_circle</i> Hernia Repair</li>
+            <li><i class="material-icons">check_circle</i> Gallbladder Surgery</li>
+            <li><i class="material-icons">check_circle</i> Trauma Surgery</li>
+            <li><i class="material-icons">check_circle</i> Gastrointestinal Surgery</li>
+            <li><i class="material-icons">check_circle</i> Minor Excision Procedures</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maternity Care -->
+  <section class="service-detail-section" id="maternity">
+    <div class="container">
+      <div class="service-layout animate-on-scroll">
+        <div class="service-image">
+          <div class="service-badge"><i class="material-icons" style="font-size: 2rem;">pregnant_woman</i></div>
+          <img src="https://images.unsplash.com/photo-1531980208269-e09041a6e5b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Maternity Care">
+        </div>
+        <div class="service-content">
+          <h2 style="color: var(--primary-color);">Maternity Care</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">We provide comprehensive care for expectant mothers, from pre-conception counseling to safe delivery and postpartum care. Our facilities are designed to make your journey to motherhood comfortable and joyous.</p>
+          
+          <h4 style="margin-bottom: 10px;">Treatment Approach</h4>
+          <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px;">A supportive, mother-and-baby-centric approach encouraging normal deliveries, supported by 24/7 fetal monitoring and pain relief options.</p>
+          
+          <h4 style="margin-bottom: 10px;">Our Services:</h4>
+          <ul class="service-features">
+            <li><i class="material-icons">check_circle</i> Antenatal Care</li>
+            <li><i class="material-icons">check_circle</i> Normal & Cesarean Delivery</li>
+            <li><i class="material-icons">check_circle</i> High-Risk Pregnancy Care</li>
+            <li><i class="material-icons">check_circle</i> Gynecological Surgeries</li>
+            <li><i class="material-icons">check_circle</i> Family Planning Advice</li>
+            <li><i class="material-icons">check_circle</i> Postnatal Support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pediatric Care -->
+  <section class="service-detail-section" id="pediatrics">
+    <div class="container">
+      <div class="service-layout reverse animate-on-scroll">
+        <div class="service-image">
+          <div class="service-badge"><i class="material-icons" style="font-size: 2rem;">child_care</i></div>
+          <img src="https://images.unsplash.com/photo-1631815587646-b85a1bb02246?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Pediatric Care">
+        </div>
+        <div class="service-content">
+          <h2 style="color: var(--primary-color);">Pediatric Care</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Dedicated care for the youngest members of your family. Our pediatricians provide compassionate care for newborns, infants, children, and adolescents in a child-friendly environment.</p>
+          
+          <h4 style="margin-bottom: 10px;">Treatment Approach</h4>
+          <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px;">Gentle, fear-free examinations combined with parental education on child nutrition and developmental milestones.</p>
+          
+          <h4 style="margin-bottom: 10px;">When to Visit:</h4>
+          <ul class="service-features">
+            <li><i class="material-icons">check_circle</i> Childhood Vaccinations</li>
+            <li><i class="material-icons">check_circle</i> Viral Fevers & Flu</li>
+            <li><i class="material-icons">check_circle</i> Growth Monitoring</li>
+            <li><i class="material-icons">check_circle</i> Asthma & Allergies</li>
+            <li><i class="material-icons">check_circle</i> Pediatric Nutrition</li>
+            <li><i class="material-icons">check_circle</i> Newborn Care (NICU support)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Critical Care -->
+  <section class="service-detail-section" id="icu">
+    <div class="container">
+      <div class="service-layout animate-on-scroll">
+        <div class="service-image">
+          <div class="service-badge"><i class="material-icons" style="font-size: 2rem;">monitor_heart</i></div>
+          <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="ICU Critical Care">
+        </div>
+        <div class="service-content">
+          <h2 style="color: var(--primary-color);">ICU / Critical Care</h2>
+          <p style="color: var(--text-light); margin-bottom: 20px;">Our multidisciplinary Intensive Care Unit is equipped with sophisticated life support systems, ventilators, and multiparameter monitors. Staffed 24/7 by intensivists and specially trained nurses.</p>
+          
+          <h4 style="margin-bottom: 10px;">Treatment Approach</h4>
+          <p style="font-size: 0.95rem; color: var(--text-light); margin-bottom: 20px;">Rapid intervention, constant monitoring, and specialized protocols to stabilize and recover critically ill patients.</p>
+          
+          <h4 style="margin-bottom: 10px;">Capabilities:</h4>
+          <ul class="service-features">
+            <li><i class="material-icons">check_circle</i> Advanced Ventilator Support</li>
+            <li><i class="material-icons">check_circle</i> Cardiac Monitoring</li>
+            <li><i class="material-icons">check_circle</i> Post-Surgical IC Care</li>
+            <li><i class="material-icons">check_circle</i> Stroke Protocols</li>
+            <li><i class="material-icons">check_circle</i> Sepsis Management</li>
+            <li><i class="material-icons">check_circle</i> 1:1 Nursing Ratio</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Emergency / Diagnostics Grouped for layout efficiency -->
+  <section class="service-detail-section bg-light" id="diagnostics-emergency">
+    <div class="container">
+      <h2 class="section-title animate-on-scroll">More Essential Services</h2>
+      
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;" class="animate-on-scroll">
+        <div class="card">
+          <i class="material-icons" style="font-size: 3rem; color: var(--danger-color); margin-bottom: 15px;">emergency</i>
+          <h3 style="margin-bottom: 15px;">Emergency Care</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Our Emergency Room operates 24/7 with a dedicated triage system, ensuring immediate attention to life-threatening conditions.</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="material-icons" style="font-size: 1rem; vertical-align: middle; color: var(--primary-color);">arrow_right</i> Trauma Care</li>
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="material-icons" style="font-size: 1rem; vertical-align: middle; color: var(--primary-color);">arrow_right</i> Cardiac Emergencies</li>
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="material-icons" style="font-size: 1rem; vertical-align: middle; color: var(--primary-color);">arrow_right</i> Acute Pain Intervention</li>
+          </ul>
+        </div>
+        
+        <div class="card">
+          <i class="material-icons" style="font-size: 3rem; color: var(--primary-color); margin-bottom: 15px;">biotech</i>
+          <h3 style="margin-bottom: 15px;">Diagnostics & Laboratory</h3>
+          <p style="color: var(--text-light); margin-bottom: 15px;">Highly accurate, rapid testing facilities under one roof to support quick and precise clinical decision-making.</p>
+          <ul style="list-style: none; padding: 0;">
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="material-icons" style="font-size: 1rem; vertical-align: middle; color: var(--primary-color);">arrow_right</i> Pathology & Hematology</li>
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="material-icons" style="font-size: 1rem; vertical-align: middle; color: var(--primary-color);">arrow_right</i> Digital X-Ray & Ultrasound</li>
+            <li style="margin-bottom: 8px; font-size: 0.9rem;"><i class="material-icons" style="font-size: 1rem; vertical-align: middle; color: var(--primary-color);">arrow_right</i> ECG & 2D Echo</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="text-center" style="margin-top: 50px;">
+        <h4 style="margin-bottom: 15px;">Need a specific treatment not listed here?</h4>
+        <a href="contact.html" class="btn btn-primary">Contact Us For Enquiries</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: white; margin-bottom: 20px;">
+            <i class="material-icons logo-icon" style="color: var(--primary-color);">local_hospital</i>
+            Noble Hospital
+          </a>
+          <p>Delivering high-quality, compassionate, and affordable healthcare to the Kandivali West community.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Contact Us</h3>
+          <p><i class="material-icons">location_on</i> Kandivali West, Mumbai, MH 400067</p>
+          <p><i class="material-icons">phone</i> <a href="tel:+917304198020" style="color: inherit;">+91 73041 98020</a></p>
+          <p><i class="material-icons">email</i> <a href="mailto:info@noblehospital.com" style="color: inherit;">info@noblehospital.com</a></p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Noble Hospital – All Rights Reserved</p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="floating-actions">
+    <a href="https://wa.me/917304198020" target="_blank" class="floating-btn btn-whatsapp"><i class="material-icons">chat</i></a>
+    <a href="tel:+917304198020" class="floating-btn btn-call"><i class="material-icons">call</i></a>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
